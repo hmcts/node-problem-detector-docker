@@ -3,12 +3,12 @@ steps:
 
   - id: build
     build: >
-      -t {{.Run.Registry}}/k8s/node-problem-detector:v0.8.2-{{.Run.ID}}
+      -t {{.Run.Registry}}/k8s/node-problem-detector:v0.8.3-{{.Run.ID}}
       .
     keep: true
 
   - id: push
     push:
-      - "{{.Run.Registry}}/k8s/node-problem-detector:v0.8.2-{{.Run.ID}}"
+      - "{{.Run.Registry}}/k8s/node-problem-detector:v0.8.3-{{.Run.ID}}"
     when:
       - build
